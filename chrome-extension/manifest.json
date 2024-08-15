@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "ShipStation",
+    "description": "Export Sample Request details to ShipStation",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "http://localhost:3000/*",
+        "https://*.salesforce.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/export.png",
+            "32": "images/export.png",
+            "48": "images/export.png",
+            "128": "images/export.png"
+        }
+    },
+    "icons": {
+        "16": "images/export.png",
+        "32": "images/export.png",
+        "48": "images/export.png",
+        "128": "images/export.png"
+    }
+}
